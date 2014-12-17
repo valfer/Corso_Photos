@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.9" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="DR5-Tb-sxx">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
+    </dependencies>
+    <scenes>
+        <!--Photos-->
+        <scene sceneID="j5i-EI-4Pt">
+            <objects>
+                <viewController id="Cj7-Xx-N15" customClass="RootViewController" customModule="Photos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SdJ-u6-jdC"/>
+                        <viewControllerLayoutGuide type="bottom" id="qlb-rG-p30"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BTj-J2-cdT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28I-ie-ifh">
+                                <rect key="frame" x="134" y="114" width="53" height="30"/>
+                                <state key="normal" title="photo 1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="launchSegue:" destination="Cj7-Xx-N15" eventType="touchUpInside" id="BRv-jB-Xo4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUd-Rw-1aM">
+                                <rect key="frame" x="134" y="184" width="53" height="30"/>
+                                <state key="normal" title="photo 2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="launchSegue:" destination="Cj7-Xx-N15" eventType="touchUpInside" id="s4e-zU-vdG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taf-Np-f0q">
+                                <rect key="frame" x="134" y="254" width="53" height="30"/>
+                                <state key="normal" title="photo 3">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="launchSegue:" destination="Cj7-Xx-N15" eventType="touchUpInside" id="wgr-gX-Bds"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="28I-ie-ifh" secondAttribute="centerX" constant="-0.5" id="6mc-km-mwl"/>
+                            <constraint firstItem="zUd-Rw-1aM" firstAttribute="top" secondItem="28I-ie-ifh" secondAttribute="bottom" constant="40" id="9Oh-HQ-jbl"/>
+                            <constraint firstAttribute="centerX" secondItem="taf-Np-f0q" secondAttribute="centerX" id="Wdd-Ml-O4a"/>
+                            <constraint firstAttribute="centerX" secondItem="zUd-Rw-1aM" secondAttribute="centerX" id="ZRx-2m-u6h"/>
+                            <constraint firstItem="28I-ie-ifh" firstAttribute="top" secondItem="SdJ-u6-jdC" secondAttribute="bottom" constant="50" id="dHx-mf-M5n"/>
+                            <constraint firstItem="taf-Np-f0q" firstAttribute="top" secondItem="zUd-Rw-1aM" secondAttribute="bottom" constant="40" id="qoi-yi-d3v"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Photos" id="UZx-rh-ppd"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="push" identifier="show" id="u3L-wc-NgU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W9O-BR-PJw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="463" y="331"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PhotoViewController" customModule="Photos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mq1-lx-bxM">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" red="0.80000001192092896" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" alpha="0.49999999999999961" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3k-gn-lWW">
+                                <rect key="frame" x="274" y="72" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Info">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bs8-Gw-av6" kind="modal" identifier="showInfo" id="h4J-Ik-D3D"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mq1-lx-bxM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="4Li-aA-GBY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mq1-lx-bxM" secondAttribute="bottom" id="7AU-To-iM1"/>
+                            <constraint firstItem="mq1-lx-bxM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8xO-My-srK"/>
+                            <constraint firstAttribute="trailing" secondItem="k3k-gn-lWW" secondAttribute="trailing" constant="16" id="Q5p-O1-IQo"/>
+                            <constraint firstAttribute="trailing" secondItem="mq1-lx-bxM" secondAttribute="trailing" id="YbD-DC-cJ1"/>
+                            <constraint firstItem="k3k-gn-lWW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="mcc-lE-EqX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jTR-0A-cgk"/>
+                    <connections>
+                        <outlet property="photoView" destination="mq1-lx-bxM" id="ilg-El-P3L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916" y="343"/>
+        </scene>
+        <!--Photo Info View Controller-->
+        <scene sceneID="vfg-eu-TD3">
+            <objects>
+                <viewController id="bs8-Gw-av6" customClass="PhotoInfoViewController" customModule="Photos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="l90-SJ-bgz"/>
+                        <viewControllerLayoutGuide type="bottom" id="qsJ-5V-mWV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8OK-HO-rGf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWl-x4-U7F">
+                                <rect key="frame" x="16" y="20" width="288" height="270"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="270" id="Qwq-K4-3a4"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gje-fp-PoY">
+                                <rect key="frame" x="138" y="227" width="44" height="30"/>
+                                <state key="normal" title="Chiudi">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="STr-zS-RFK" kind="unwind" unwindAction="unwindToPhoto:" id="K1X-cC-dwo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCX-L9-9A8">
+                                <rect key="frame" x="100" y="269" width="121" height="30"/>
+                                <state key="normal" title="Chiudi con action">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeInfo:" destination="bs8-Gw-av6" eventType="touchUpInside" id="5wC-s4-Nxg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sCX-L9-9A8" firstAttribute="top" secondItem="gje-fp-PoY" secondAttribute="bottom" constant="12" id="3bZ-LX-JWc"/>
+                            <constraint firstItem="gje-fp-PoY" firstAttribute="top" secondItem="rWl-x4-U7F" secondAttribute="bottom" constant="-63" id="4eK-cG-Kox"/>
+                            <constraint firstItem="rWl-x4-U7F" firstAttribute="top" secondItem="l90-SJ-bgz" secondAttribute="bottom" id="BgG-7h-cIA"/>
+                            <constraint firstItem="rWl-x4-U7F" firstAttribute="centerX" secondItem="gje-fp-PoY" secondAttribute="centerX" id="MZE-eX-29C"/>
+                            <constraint firstItem="rWl-x4-U7F" firstAttribute="leading" secondItem="8OK-HO-rGf" secondAttribute="leading" constant="16" id="W0v-ac-lcG"/>
+                            <constraint firstAttribute="trailing" secondItem="rWl-x4-U7F" secondAttribute="trailing" constant="16" id="Wh4-eP-6GL"/>
+                            <constraint firstItem="sCX-L9-9A8" firstAttribute="centerX" secondItem="rWl-x4-U7F" secondAttribute="centerX" constant="0.5" id="zCv-aP-xXj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vrl-uy-aSu"/>
+                    <connections>
+                        <outlet property="infoTextView" destination="rWl-x4-U7F" id="fU6-Vw-TRh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EVW-fr-zfT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="STr-zS-RFK" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1319" y="334"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2B0-ta-eEL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DR5-Tb-sxx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JjD-h9-nfR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Cj7-Xx-N15" kind="relationship" relationship="rootViewController" id="Pwc-LS-6zA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="unN-LR-iNz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3" y="351"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4">
+            <size key="portraitSize" width="320" height="568"/>
+            <size key="landscapeSize" width="568" height="320"/>
+        </simulatedScreenMetrics>
+    </simulatedMetricsContainer>
+</document>
